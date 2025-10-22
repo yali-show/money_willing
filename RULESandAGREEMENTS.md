@@ -52,6 +52,14 @@ git add . # add all files in our case
 git commit -m "feature/database connection"
 ```
 
+Then send it to remote storage.
+
+```git
+
+git push origin <branch name>
+
+```
+
 What if you commited shit? 
 
 Code that does not work or have bugs?
@@ -69,6 +77,8 @@ git add . # add all files in our case
 
 #git commit -m "bugfix/<current commit changes>"
 git commit -m "bugfix/database connection fix"
+
+git push origin <branch name>
 ```
 
 
@@ -76,20 +86,11 @@ git commit -m "bugfix/database connection fix"
 
 When you done your feature and you are sure 100% it is okey, then let's merge it into `dev_frontend` in our case
 
-```git
-git checkout dev_frontend
-git merge feature/filter-page
-# or
-git merge bugfix/database
-```
-
+do merges in github 
 
 If you have the working version (all trello tasks done with no bugs) - send code for review and merge request to dev branch
 
-```git
-git checkout dev 
-git merge dev_frontend
-```
+do merges requests in github 
 
 After my review will be merged to dev branch and then i'll merge everything to main with documentation
 
