@@ -7,6 +7,7 @@ import { useCart } from "@/contexts/cart-context"
 import { CartDrawer } from "@/components/cart-drawer"
 import Link from "next/link"
 
+
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -54,12 +55,39 @@ export function Header() {
                 <span className="absolute bottom-0 left-0 w-0 h-px bg-primary group-hover:w-full transition-all duration-300" />
               </Link>
               <Link
-                href="/catalogo/limited"
-                className="text-sm lg:text-base text-muted-foreground hover:text-foreground transition-colors duration-300 relative group"
+                  href="/catalogo/limited"
+                  className="text-sm lg:text-base text-muted-foreground hover:text-foreground transition-colors duration-300 relative group"
               >
-                Edición Limitada
-                <span className="absolute bottom-0 left-0 w-0 h-px bg-primary group-hover:w-full transition-all duration-300" />
+                  Edición Limitada
+                  
+                  <span
+                      className="
+                          absolute 
+                          content-['']
+                          bottom-[-18px]
+                          left-1/2 
+                          -translate-x-1/2
+                          w-[115%]
+                          h-[20px]
+
+                          /* Fondo de luces (sin cambios) */
+                          [background-image:radial-gradient(circle,#ff3b3b_3px,transparent_3px),radial-gradient(circle,#ffeb3b_3px,transparent_3px),radial-gradient(circle,#4caf50_3px,transparent_3px),radial-gradient(circle,#2196f3_3px,transparent_3px)] 
+                          [background-size:24px_12px] 
+                          [background-position:0_0,6px_0,12px_0,18px_0] 
+                          bg-repeat-x
+                          mask-[wavy-line] /* Mucho más limpio y sin errores */
+                          [mask-size:100%_100%]
+                          [mask-repeat:no-repeat]
+
+                          /* Animación (sin cambios) */
+                          animate-[twinkle_2s_infinite_ease-in-out]
+                      "
+                  />
+
+                  <span className="absolute bottom-0 left-0 w-0 h-px bg-primary group-hover:w-full transition-all duration-300" />
               </Link>
+
+
             </nav>
 
             {/* Cart Icon */}

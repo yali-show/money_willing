@@ -126,3 +126,34 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+/* 🎄 Guirnalda navideña */
+.christmas-link::before {
+  content: '';
+  position: absolute;
+  top: -14px; /* Altura de la guirnalda */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110%;
+  height: 10px;
+  background-image: radial-gradient(circle, #ff3b3b 3px, transparent 3px),
+                    radial-gradient(circle, #ffeb3b 3px, transparent 3px),
+                    radial-gradient(circle, #4caf50 3px, transparent 3px),
+                    radial-gradient(circle, #2196f3 3px, transparent 3px);
+  background-size: 24px 10px;
+  background-position: 0 0, 6px 0, 12px 0, 18px 0;
+  background-repeat: repeat-x;
+  border-bottom: 2px solid #333; /* cablecito */
+  border-radius: 50%;
+  animation: twinkle 2s infinite ease-in-out;
+  pointer-events: none;
+}
+
+/* 💡 Animación de luces */
+@keyframes twinkle {
+  0%   { filter: drop-shadow(0 0 4px #ff3b3b); opacity: 0.9; }
+  25%  { filter: drop-shadow(0 0 5px #ffeb3b); opacity: 1; }
+  50%  { filter: drop-shadow(0 0 5px #4caf50); opacity: 0.8; }
+  75%  { filter: drop-shadow(0 0 5px #2196f3); opacity: 1; }
+  100% { filter: drop-shadow(0 0 4px #ff3b3b); opacity: 0.9; }
+}

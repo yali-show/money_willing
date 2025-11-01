@@ -75,6 +75,11 @@ export default function ProductClient({ watch }: { watch: Watch }) {
           </div>
 
           <div className="flex items-baseline gap-4">
+            {/*Precio tachado original*/}
+            <p className="text-2xl text-gray-500 line-through">
+                €{watch.price.toLocaleString()}
+            </p>
+            {/*Precio nuevo*/}
             <p className="text-4xl font-bold text-primary">€{watch.price.toLocaleString()}</p>
             {watch.limited && (
               <Badge variant="outline" className="text-sm">

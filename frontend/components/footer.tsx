@@ -3,6 +3,7 @@
 import { Instagram, Facebook, Youtube } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import { SiTiktok } from 'react-icons/si';
 
 export function Footer() {
   return (
@@ -103,7 +104,7 @@ export function Footer() {
               <Instagram className="h-5 w-5" />
             </a>
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300">
-              <Facebook className="h-5 w-5" />
+              <SiTiktok className="h-5 w-5" />
             </a>
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300">
               <Youtube className="h-5 w-5" />

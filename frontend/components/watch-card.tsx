@@ -37,6 +37,9 @@ export function WatchCard({ watch }: WatchCardProps) {
         </div>
 
         <div className="flex items-center justify-between">
+           <p className="text-1xl text-gray-500 line-through">
+                €{watch.price.toLocaleString()}
+            </p>
           <p className="text-2xl font-bold text-primary">${watch.price.toLocaleString()}</p>
           {watch.limited && (
             <p className="text-sm text-muted-foreground">

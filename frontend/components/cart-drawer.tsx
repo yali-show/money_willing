@@ -64,6 +64,7 @@ export function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                       {item.watch.name}
                     </Link>
                     <p className="text-sm text-muted-foreground mt-1">{item.watch.collection}</p>
+                    <p className="text-accent-gray-500 font-semibold mt-2 line-through">${item.watch.price.toLocaleString()}</p>
                     <p className="text-accent font-semibold mt-2">€{item.watch.price.toLocaleString()}</p>
 
                     <div className="flex items-center gap-3 mt-3">
@@ -102,6 +103,7 @@ export function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
           <div className="border-t border-accent/20 p-6 space-y-4">
             <div className="flex items-center justify-between text-lg">
               <span className="text-muted-foreground">Total</span>
+              <span className="text-accent-gray-500 font-semibold mt-2 line-through">${totalPrice.toLocaleString()}</span>
               <span className="font-serif text-2xl text-accent">€{totalPrice.toLocaleString()}</span>
             </div>
 
